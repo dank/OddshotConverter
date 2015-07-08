@@ -13,14 +13,11 @@ reddit.auth({username: 'USERNAME', password: 'PASSWORD'}, function(err) { // Red
    } else {
       console.log('Authentication complete.');
 
-      // Initial call
-      youtube.refresh(fetch);
-      fetch('OddshotBot');
-
-      // Loop forever
-      setInterval(fetch, 2000, 'OddshotBot');
-      setInterval(youtube.refresh, 1800000); // YouTube access_token expires every 1 hour, refresh for a new token every 30 minutes.
-      // TODO: Possibly use crontab instead
+      youtube.refresh(function() {
+         setInterval(fetch, 2000, 'OddshotBot'); // maximum 30 requests per minute https://github.com/reddit/reddit/wiki/API
+         setInterval(youtube.refresh, 1800000); // YouTube access_token expires every 1 hour, refresh for a new token every 30 minutes.
+         // TODO: Crontab might be more useful
+      });
    }
 });
 
@@ -43,15 +40,19 @@ var fetch = function(subreddit) {
                               var url = body.match('source src="(.*?)" type=\'video/mp4\'')[1];
                               var dir = './tmp/' + data.data.id + '.mp4';
 
-                              downloadFile(url, dir, function () {
-                                 youtube.upload(data.data.title, 'I am a bot. Please report any bugs to me, my contact info can be found below.\nOriginal video: ' + data.data.url + '\n\nGitHub: https://github.com/nicememe/oddshotconverter\nContact: https://keybase.io/gay', dir, function (err, up) {
+                              if (!fs.existsSync('./tmp/')) { // TODO: Apparently this is bad practice (?)
+                                 fs.mkdirSync('./tmp/');
+                              }
+
+                              request(url).pipe(fs.createWriteStream(dir)).on('close', function() {
+                                 youtube.upload(data.data.title, 'I am a bot. Please report any bugs to me, my contact info can be found below.\nOriginal video: ' + data.data.url + '\n\nGitHub: https://github.com/nicememe/oddshotconverter\nContact: https://keybase.io/gay\nFAQ: https://www.reddit.com/r/OddshotBot/wiki/faq', dir, function (err, up) {
                                     if (err) {
                                        error('Upload error. Error: ' + err);
                                     } else {
                                        var ytUrl = 'https://youtu.be/' + up.id;
                                        post.updateAttributes({mirror: ytUrl});
 
-                                       reddit.comment(data.data.name, '[YouTube Mirror](' + ytUrl + ')\n****\n^I ^am ^a ^bot. ^Please ^report ^any ^bugs ^to ^/u/iEyepawd.  \n^[github](https://github.com/nicememe/oddshotconverter) ^- ^[contact](https://keybase.io/gay)', function(err, comment) {
+                                       reddit.comment(data.data.name, '[YouTube Mirror](' + ytUrl + ')\n****\n^I ^am ^a ^bot. ^Feel ^free ^to ^send ^me ^any ^bugs/suggestions/comments!  \n^[github](https://github.com/nicememe/oddshotconverter) ^- ^[contact](https://keybase.io/gay) ^- ^[faq](https://www.reddit.com/r/OddshotBot/wiki/faq)', function(err, comment) {
                                           if(err) {
                                              error('Failed to comment. Error: ' + err);
                                           } else {
@@ -75,11 +76,7 @@ var fetch = function(subreddit) {
             }
          });
       }
-   }); // Not sure if I can do anything about these }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}} =(
-};
-
-var downloadFile = function(url, dir, next) {
-   request(url).pipe(fs.createWriteStream(dir)).on('close', next);
+   });
 };
 
 var error = function(log){

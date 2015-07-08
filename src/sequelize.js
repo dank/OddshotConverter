@@ -22,4 +22,4 @@ exports.errors = sequelize.define('errors', {
    error: {type: Sequelize.TEXT, allowNull: false}
 });
 
-//sequelize.sync();
+sequelize.sync();
