@@ -3,7 +3,6 @@ var fs = require('fs');
 
 var oauth = google.auth.OAuth2;
 var client = new oauth('CLIENT_ID', 'CLIENT_SECRET', 'REDIRECT_URI'); // REDIRECT_URI optional, never used. https://developers.google.com/youtube/registering_an_application
-
 var refreshToken = 'REFRESH_TOKEN'; // client.generateAuthUrl(), client.getToken() https://github.com/google/google-api-nodejs-client/#authorizing-and-authenticating
 
 exports.refresh = function(next) {
@@ -16,7 +15,9 @@ exports.refresh = function(next) {
          client.setCredentials(tokens);
          console.log('Access token refreshed.');
 
-         next();
+         if(next) {
+            next();
+         }
       }
    });
 };

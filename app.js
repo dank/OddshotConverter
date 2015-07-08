@@ -6,7 +6,6 @@ var youtube = require('./src/youtube');
 var fs = require('fs');
 
 reddit.setupOAuth2('CLIENT_ID', 'CLIENT_SECRET', 'REDIRECT_URI'); // REDIRECT_URI is optional and never used. https://github.com/reddit/reddit/wiki/OAuth2
-
 reddit.auth({username: 'USERNAME', password: 'PASSWORD'}, function(err) { // Reddit account username & password
    if(err) {
       error('Authentication failed. Error: ' + err);
