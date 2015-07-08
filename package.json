@@ -1,0 +1,15 @@
+{
+  "name": "OddshotConverter",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "googleapis": "^2.0.6",
+    "mysql": "^2.7.0",
+    "raw.js": "^0.4.0",
+    "request": "^2.58.0",
+    "sequelize": "^3.3.2"
+  }
+}
