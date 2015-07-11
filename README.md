@@ -16,3 +16,6 @@ If you feel kind, it would be very much appreciated.
 #Contact
 You can find most my contact info on keybase.
 * Keybase: [Link](https://keybase.io/gay)
+
+#Known Issue(s)
+* Rare cases when videos never gets uploaded to YouTube/commented.
