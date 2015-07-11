@@ -1,6 +1,6 @@
 var request = require('request');
 var rawjs = require('raw.js');
-var reddit = new rawjs('Oddshot Converter by /u/iEyepawd (rel-1.0)');
+var reddit = new rawjs('Oddshot Converter by /u/iEyepawd (rel-1.1)');
 var models = require('./src/sequelize');
 var youtube = require('./src/youtube');
 var fs = require('fs');
@@ -36,7 +36,7 @@ var fetch = function(subreddit) {
                            } else if(res.statusCode != 200) {
                               error('Request error. Error: Status Code ' + res.statusCode);
                            } else {
-                              var url = body.match('source src="(.*?)" type=\'video/mp4\'')[1];
+                              var url = body.match('source src=(?:"|\')(.*?)(?:"|\') type=(?:"|\')video/mp4(?:"|\')')[1];
                               var dir = './tmp/' + data.data.id + '.mp4';
 
                               if (!fs.existsSync('./tmp/')) { // TODO: Apparently this is bad practice (?)
