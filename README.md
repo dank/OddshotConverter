@@ -18,4 +18,4 @@ You can find most my contact info on keybase.
 * Keybase: [Link](https://keybase.io/gay)
 
 #Known Issue(s)
-* Rare cases when videos never get uploaded to YouTube/commented.
+* ~~Rare cases when videos never get uploaded to YouTube/commented.~~ (fixed v1.1)
