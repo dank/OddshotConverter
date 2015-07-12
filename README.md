@@ -19,3 +19,4 @@ You can find most my contact info on keybase.
 
 #Known Issue(s)
 * ~~Rare cases when videos never get uploaded to YouTube/commented.~~ (fixed v1.1)
+* "Pending" oddshot clips breaks the bot. 
