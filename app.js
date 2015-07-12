@@ -1,6 +1,6 @@
 var request = require('request');
 var rawjs = require('raw.js');
-var reddit = new rawjs('Oddshot Converter by /u/iEyepawd (rel-1.2)');
+var reddit = new rawjs('Oddshot Converter by /u/iEyepawd (rel-1.2.1)');
 var models = require('./src/sequelize');
 var youtube = require('./src/youtube');
 var fs = require('fs');
@@ -69,6 +69,7 @@ var fetchOnce = function(data, post) {
                         } else {
                            post.updateAttributes({commentId: comment.data.id});
 
+                           console.log('Successfully converted ' + data.data.id + ' to ' + comment.data.id + '(' + up.id + ').');
                            fs.unlink(dir, function (err) {
                               if (err) {
                                  error('Error removing file. Error: ' + err);
@@ -80,6 +81,7 @@ var fetchOnce = function(data, post) {
                });
             });
          } else {
+            console.log('Unable to convert ' + data.data.id + ' retrying in 10 seconds.');
             setTimeout(fetchOnce, 10000, data, post);
          }
       }
