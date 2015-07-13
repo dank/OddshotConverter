@@ -1,6 +1,6 @@
 var request = require('request');
 var rawjs = require('raw.js');
-var reddit = new rawjs('Oddshot Converter by /u/iEyepawd (rel-1.2.2)');
+var reddit = new rawjs('Oddshot Converter by /u/iEyepawd (rel-1.0.6)');
 var models = require('./src/sequelize');
 var youtube = require('./src/youtube');
 var fs = require('fs');
