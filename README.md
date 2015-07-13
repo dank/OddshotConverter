@@ -10,14 +10,14 @@ $ node app.js
 
 #Donate
 If you feel kind, it would be very much appreciated.
-* PayPal: [Link](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=XN2DEUWZ7HD2Y&lc=CA&item_name=Eyepawd&currency_code=CAD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
+* [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=XN2DEUWZ7HD2Y&lc=CA&item_name=Eyepawd&currency_code=CAD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
 * Bitcoin: 1FK2WLGmBzkZ4H7Vb8edpY12y4p1ZuBmEN
 
 #Contact
 You can find most my contact info on keybase.
-* Keybase: [Link](https://keybase.io/gay)
+* [Keybase](https://keybase.io/gay)
 
-#Update History
+#Updates
 I'll post detailed updates to reddit from now on for organization and stuff.  
 It can be found here: https://www.reddit.com/r/OddshotBot
 
