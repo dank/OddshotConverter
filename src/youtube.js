@@ -1,9 +1,10 @@
 var google = require('googleapis');
 var fs = require('fs');
+var config = require('../config.js');
 
 var oauth = google.auth.OAuth2;
-var client = new oauth('CLIENT_ID', 'CLIENT_SECRET', 'REDIRECT_URI'); // REDIRECT_URI optional, never used. https://developers.google.com/youtube/registering_an_application
-var refreshToken = 'REFRESH_TOKEN'; // client.generateAuthUrl(), client.getToken() https://github.com/google/google-api-nodejs-client/#authorizing-and-authenticating
+var client = new oauth(config.YOUTUBE_CLIENT_ID, config.YOUTUBE_CLIENT_SECRET, config.YOUTUBE_REDIRECT_URL);
+var refreshToken = config.YOUTUBE_REFRESH_TOKEN;
 
 exports.refresh = function(next) {
    client.setCredentials({

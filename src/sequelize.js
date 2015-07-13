@@ -1,6 +1,8 @@
+var config = require('../config.js');
+
 var Sequelize = require('sequelize');
-var sequelize = new Sequelize('DATABASE', 'USERNAME', 'PASSWORD', { // MySQL info
-   host: 'HOST',
+var sequelize = new Sequelize(config.DB_DATABASE, config.DB_USERNAME, config.DB_PASSWORD, {
+   host: config.DB_HOST,
    port: 3306,
    logging: false,
    pool: {

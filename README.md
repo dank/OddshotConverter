@@ -2,7 +2,7 @@
 A simple reddit bot that fetches oddshot.tv clips from /new and converts it into a YouTube video for a better viewing experience for everyone.
 
 #Installation
-Fill out all the missing client ids, client secret, username/password, etc.
+Fill out all the required fields in config.js
 ```
 $ npm install
 $ node app.js
@@ -15,14 +15,14 @@ If you feel kind, it would be very much appreciated.
 
 #Contact
 You can find most my contact info on keybase.
-* [Keybase](https://keybase.io/gay)
+* [Keybase](https://keybase.io/pawd)
 
 #Updates
 I'll post detailed updates to reddit from now on for organization and stuff.  
 It can be found here: https://www.reddit.com/r/OddshotBot
 
 #Todo
-- Get rid of messy callback hell
+- None
 
 #Known Issue(s)
 * ~~Rare cases when videos never get uploaded to YouTube/commented.~~ **(fixed v1.0.2)**
