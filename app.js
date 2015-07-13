@@ -59,6 +59,7 @@ var fetchOnce = function(data, post) {
                youtube.upload(data.data.title, 'I am a bot. Please report any bugs to me, my contact info can be found below.\nOriginal video: ' + data.data.url + '\n\nGitHub: https://github.com/nicememe/oddshotconverter\nContact: https://keybase.io/gay\nFAQ: https://www.reddit.com/r/OddshotBot/wiki/faq', dir, function (err, up) {
                   if (err) {
                      error('Upload error. Error: ' + err);
+                     post.updateAttributes({mirror: err, commentId: 'error'});
                   } else {
                      var ytUrl = 'https://youtu.be/' + up.id;
                      post.updateAttributes({mirror: ytUrl});
@@ -66,10 +67,11 @@ var fetchOnce = function(data, post) {
                      reddit.comment(data.data.name, '[YouTube Mirror](' + ytUrl + ')\n****\n^I ^am ^a ^bot. ^Feel ^free ^to ^send ^me ^any ^bugs/suggestions/comments!  \n^[github](https://github.com/nicememe/oddshotconverter) ^- ^[contact](https://keybase.io/gay) ^- ^[faq](https://www.reddit.com/r/OddshotBot/wiki/faq)', function (err, comment) {
                         if (err) {
                            error('Failed to comment. Error: ' + err);
+                           post.updateAttributes({commentId: err});
                         } else {
                            post.updateAttributes({commentId: comment.data.id});
-
                            console.log('Successfully converted ' + data.data.id + ' to ' + comment.data.id + '(' + up.id + ').');
+
                            fs.unlink(dir, function (err) {
                               if (err) {
                                  error('Error removing file. Error: ' + err);
