@@ -18,5 +18,9 @@ You can find most my contact info on keybase.
 * Keybase: [Link](https://keybase.io/gay)
 
 #Known Issue(s)
-* ~~Rare cases when videos never get uploaded to YouTube/commented.~~ **(fixed v1.1)**
-* ~~"Pending" oddshot clips breaks the bot.~~ **(fixed v1.2)**
+* ~~Rare cases when videos never get uploaded to YouTube/commented.~~ **(fixed v1.0.2)**
+* ~~"Pending" oddshot clips breaks the bot.~~ **(fixed v1.0.3)**
+
+#Update History
+I'll post detailed updates to reddit from now on for organization and stuff.  
+It can be found here: https://www.reddit.com/r/OddshotBot
