@@ -1,5 +1,5 @@
 # OddshotConverter
-A simple reddit bot that fetches oddshot.tv clips from 'new' and converts it into a YouTube video for a better viewing experience.
+A simple Reddit bot that fetches oddshot.tv clips from 'new' and converts it into a YouTube video for a better viewing experience.
 
 #Installation
 Fill out all the required fields in config.js
@@ -18,7 +18,7 @@ You can find most my contact info on keybase.
 * [Keybase](https://keybase.io/pawd)
 
 #Updates
-* [reddit](https://np.reddit.com/r/OddshotBot)
+* [Reddit](https://np.reddit.com/r/OddshotBot)
 
 #Todo
 - None
