@@ -28,4 +28,4 @@ It can be found here: https://www.reddit.com/r/OddshotBot
 * ~~Rare cases when videos never get uploaded to YouTube/commented.~~ **(fixed v1.0.2)**
 * ~~"Pending" oddshot clips breaks the bot.~~ **(fixed v1.0.3)**
 
-*I am not affliated with Oddshot.tv in anyway, all copyrights reserved to its respective owners.*
+**I am not affliated with Oddshot.tv in anyway, all copyrights reserved to its respective owners.**
