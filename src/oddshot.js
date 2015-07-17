@@ -5,7 +5,7 @@ var youtube =  require('./youtube');
 var models = require('./sequelize');
 var helper = require('./helper');
 
-var reddit = exports.reddit =  new rawjs('Oddshot Converter by /u/iEyepawd (rel-1.1.0)'); // Descriptive user agent
+var reddit = exports.reddit =  new rawjs('Oddshot Converter by /u/iEyepawd (rel-1.1.1)'); // Descriptive user agent
 
 exports.fetch = function(subreddit) {
    reddit.new({r: subreddit, limit: 5}, function(err, res) {
@@ -43,7 +43,7 @@ var fetchOnce = exports.fetchOnce = function(data, post) {
             }
 
             request(url).pipe(fs.createWriteStream(dir)).on('close', function () {
-               youtube.upload(data.data.title, 'I am a bot. Please report any bugs to me, my contact info can be found below.\nOriginal video: ' + data.data.url + '\n\nGitHub: https://github.com/nicememe/oddshotconverter\nContact: https://keybase.io/pawd\nFAQ: https://np.reddit.com/r/OddshotBot/wiki/faq', dir, function (err, up) {
+               youtube.upload(data.data.title, 'I am a bot. Please report any bugs to me, my contact info can be found below.\nOriginal video: ' + data.data.url + '\nReddit: https://redd.it/' + data.data.id + '\n\nGitHub: https://github.com/nicememe/oddshotconverter\nContact: https://keybase.io/pawd\nFAQ: https://np.reddit.com/r/OddshotBot/wiki/faq\n\nI am not affiliated with Oddshot.tv or reddit in anyway, all copyrights reserved to their respective owners.', dir, function (err, up) {
                   if (err) {
                      helper.errorHandler('Upload error. Error: ' + err);
                      post.updateAttributes({mirror: err, commentId: 'error'});

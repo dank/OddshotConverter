@@ -1,5 +1,5 @@
 # OddshotConverter
-A simple reddit bot that fetches oddshot.tv clips from /new and converts it into a YouTube video for a better viewing experience.
+A simple reddit bot that fetches oddshot.tv clips from 'new' and converts it into a YouTube video for a better viewing experience.
 
 #Installation
 Fill out all the required fields in config.js
@@ -18,14 +18,16 @@ You can find most my contact info on keybase.
 * [Keybase](https://keybase.io/pawd)
 
 #Updates
-I'll post detailed updates to reddit from now on for organization and stuff.  
-It can be found here: https://www.reddit.com/r/OddshotBot
+* [reddit](https://np.reddit.com/r/OddshotBot)
 
 #Todo
 - None
 
-#Known Issue(s)
+#Known Issues
 * ~~Rare cases when videos never get uploaded to YouTube/commented.~~ **(fixed v1.0.2)**
 * ~~"Pending" oddshot clips breaks the bot.~~ **(fixed v1.0.3)**
 
-**I am not affliated with Oddshot.tv in anyway, all copyrights reserved to its respective owners.**
+#Note
+Currently this bot is only running on [/r/GlobalOffensive](https://np.reddit.com/r/GlobalOffensive), please page [/u/OddshotBot](https://np.reddit.com/u/OddshotBot) or [/u/iEyepawd](https://np.reddit.com/u/iEyepawd) if you think there are significant amount of Oddshot clips to be converted in your subreddit.
+
+**I am not affiliated with Oddshot.tv or reddit in anyway, all copyrights reserved to their respective owners.**
