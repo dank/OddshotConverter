@@ -11,7 +11,7 @@ oddshot.reddit.auth({username: config.REDDIT_USERNAME, password: config.REDDIT_P
       console.log('Authentication complete.');
 
       youtube.refresh(function() {
-         setInterval(oddshot.fetch, 2000, config.REDDIT_SUBREDDIT); // maximum 30 requests per minute https://github.com/reddit/reddit/wiki/API
+         setInterval(oddshot.fetch, 2000, config.REDDIT_SUBREDDIT, config.REDDIT_FETCH_LIMIT); // maximum 30 requests per minute https://github.com/reddit/reddit/wiki/API
          setInterval(youtube.refresh, 1800000); // YouTube access_token expires every 1 hour, refresh for a new token every 30 minutes.
          // TODO: Crontab might be more useful
       });

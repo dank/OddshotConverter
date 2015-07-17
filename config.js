@@ -1,5 +1,6 @@
 // Reddit - https://www.reddit.com/r/rawjs/wiki/documentation / https://github.com/reddit/reddit/wiki/OAuth2
 exports.REDDIT_SUBREDDIT = ''; // Use "+" for multiple subreddits (ex. funny+videos+pics)
+exports.REDDIT_FETCH_LIMIT = 5; // Maximum number of posts per request (max: 100)
 exports.REDDIT_CLIENT_ID = '';
 exports.REDDIT_CLIENT_SECRET = '';
 exports.REDDIT_REDIRECT_URL = ''; // Optional and never used

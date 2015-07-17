@@ -5,10 +5,10 @@ var youtube =  require('./youtube');
 var models = require('./sequelize');
 var helper = require('./helper');
 
-var reddit = exports.reddit =  new rawjs('Oddshot Converter by /u/iEyepawd (rel-1.1.1)'); // Descriptive user agent
+var reddit = exports.reddit =  new rawjs('Oddshot Converter by /u/iEyepawd (rel-1.1.2)'); // Descriptive user agent
 
-exports.fetch = function(subreddit) {
-   reddit.new({r: subreddit, limit: 5}, function(err, res) {
+exports.fetch = function(subreddit, limit) {
+   reddit.new({r: subreddit, limit: limit}, function(err, res) {
       if(err) {
          helper.errorHandler('Error fetching posts. Error: ' + err);
       } else {
