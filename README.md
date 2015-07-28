@@ -21,7 +21,7 @@ You can find most my contact info on keybase.
 * [Reddit](https://np.reddit.com/r/OddshotBot)
 
 #Todo
-- None
+- Use [/domain/oddshot.tv](https://www.reddit.com/domain/oddshot.tv) instead of sperate subreddits.
 
 #Known Issues
 * ~~Rare cases when videos never get uploaded to YouTube/commented.~~ **(fixed v1.0.2)**
