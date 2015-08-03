@@ -28,6 +28,6 @@ You can find most my contact info on keybase.
 * ~~"Pending" oddshot clips breaks the bot.~~ **(fixed v1.0.3)**
 
 #Note
-Currently this bot is only running on [/r/GlobalOffensive](https://np.reddit.com/r/GlobalOffensive) and [/r/DotA2](https://np.reddit.com/r/DotA2), please message [/u/OddshotBot](https://np.reddit.com/u/OddshotBot) or [/u/iEyepawd](https://np.reddit.com/u/iEyepawd) if you think there are significant amounts of Oddshot clips to be converted in your subreddit.
+Check the [/r/OddshotBot](https://np.reddit.com/r/OddshotBot) sidebar for a list of subreddit this bot is active on.
 
 **I am not affiliated with Oddshot.tv or Reddit in anyway, all copyrights reserved to their respective owners.**
