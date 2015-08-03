@@ -28,6 +28,6 @@ You can find most my contact info on keybase.
 * ~~"Pending" oddshot clips breaks the bot.~~ **(fixed v1.0.3)**
 
 #Note
-Check the [/r/OddshotBot](https://np.reddit.com/r/OddshotBot) sidebar for a list of subreddit this bot is active on.
+Check the [/r/OddshotBot](https://np.reddit.com/r/OddshotBot) sidebar for a list of subreddits this bot is active on.
 
 **I am not affiliated with Oddshot.tv or Reddit in anyway, all copyrights reserved to their respective owners.**
