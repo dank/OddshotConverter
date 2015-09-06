@@ -1,6 +1,8 @@
 # OddshotConverter
 A simple Reddit bot that fetches oddshot.tv clips from 'new' and converts it into a YouTube video for a better viewing experience.
 
+[Check out this userscript by Oisann that brings /u/OddshotBot comments to the top!](https://github.com/Oisann/OddshotConverter/raw/88bf5b0edea0937f01d383f8ac667abe9ed94a4f/OddshotBot.user.js)
+
 #Installation
 Fill out all the required fields in config.js
 ```
