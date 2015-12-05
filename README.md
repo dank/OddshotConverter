@@ -1,3 +1,5 @@
+**This git does not contain the latest version of OddshotBot.**
+
 # OddshotConverter
 A simple Reddit bot that fetches oddshot.tv clips from 'new' and converts it into a YouTube video for a better viewing experience.
 
