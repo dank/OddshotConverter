@@ -1,0 +1,92 @@
+{
+  "reddit": {
+    "fetchLimit": 50,
+    "clientId": "",
+    "clientSecret": "",
+    "redirectUrl": "",
+    "username": "",
+    "password": ""
+  },
+  "youtube": {
+    "clientId": "",
+    "clientSecret": "",
+    "redirectUrl": "",
+    "refreshToken": ""
+  },
+  "mysql": {
+    "database": "",
+    "username": "",
+    "password": "",
+    "host": "",
+    "port": 3306
+  },
+  "facebook": {
+    "pageId": 111,
+    "accessToken": ""
+  },
+  "blacklists": {
+    "subreddits": [
+      "anime", "asianamerican", "askhistorians", "askreddit", "askscience", "aww", "chicagosuburbs", "cosplay", "cumberbitches", "d3gf", "deer",
+      "depression", "depthhub", "drinkingdollars", "forwardsfromgrandma", "geckos", "giraffes", "grindsmygears", "indianfetish", "misc",
+      "mixedbreeds", "movies", "news", "newtotf2", "omaha", "petstacking", "pigs", "politicaldiscussion", "politics", "programmingcirclejerk",
+      "raerthdev", "rants", "runningcirclejerk", "salvia", "science", "seiko", "shoplifting", "sketches", "sociopath", "suicidewatch",
+      "talesfromtechsupport", "torrent", "torrents", "trackers", "tr4shbros", "unitedkingdom", "crucibleplaybook", "benfrick", "futurology",
+      "graphic_design", "historicalwhatif", "lolgrindr", "malifaux", "nfl", "toonami", "ps2ceres", "duelingcorner", "bmw",
+      "hearthstone", "livestreamfails"
+    ],
+    "channels": ["tempo_storm", "reynad27", "chanmanv"]
+  },
+  "whitelists": {
+    "subreddits": ["leagueoflegends"]
+  },
+  "games": {
+    "globaloffensive": {
+      "title": "Counter-Strike: Global Offensive",
+      "short": "CSGO"
+    },
+    "leagueoflegends": {
+      "title": "League of Legends",
+      "short": "LoL"
+    },
+    "hearthstone": {
+      "title": "Hearthstone",
+      "short": "HS"
+    },
+    "dota2": {
+      "title": "Dota 2",
+      "short": "Dota"
+    },
+    "2007scape": {
+      "title": "RuneScape",
+      "short": "RS"
+    },
+    "h1z1": {
+      "title": "H1Z1",
+      "short": "H1Z1"
+    },
+    "starcraft": {
+      "title": "StarCraft",
+      "short": "SC"
+    },
+    "codcompetitive": {
+      "title": "Call of Duty",
+      "short": "CoD"
+    },
+    "rocketleague": {
+      "title": "Rocket League",
+      "shorthand": "RL"
+    },
+    "overwatch": {
+      "title": "Overwatch",
+      "short": "OW"
+    },
+    "osugame": {
+      "title": "osu!",
+      "short": "osu"
+    },
+    "oddshotbottest": {
+      "title": "Counter-Strike: Global Offensive",
+      "short": "CSGO"
+    }
+  }
+}

@@ -1,0 +1,3 @@
+node_modules/
+syntax: glob
+test.js

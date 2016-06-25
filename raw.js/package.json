@@ -1,0 +1,44 @@
+{
+  "name": "raw.js",
+  "version": "0.4.0",
+  "description": "API wrapper for reddit.com",
+  "keywords": [
+    "reddit",
+    "api",
+    "wrapper"
+  ],
+  "homepage": "https://bitbucket.org/Doctor_McKay/raw.js",
+  "bugs": {
+    "url": "https://bitbucket.org/Doctor_McKay/raw.js/issues"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "hg",
+    "url": "git+https://bitbucket.org/Doctor_McKay/raw.js.git"
+  },
+  "dependencies": {
+    "request": "*",
+    "ws": "0.4.x"
+  },
+  "_id": "raw.js@0.4.0",
+  "dist": {
+    "shasum": "80c27a1f49122cf10dae17626884e2336830e644",
+    "tarball": "http://registry.npmjs.org/raw.js/-/raw.js-0.4.0.tgz"
+  },
+  "_from": "raw.js@*",
+  "_npmVersion": "1.4.3",
+  "_npmUser": {
+    "name": "doctormckay",
+    "email": "mckay@doctormckay.com"
+  },
+  "maintainers": [
+    {
+      "name": "doctormckay",
+      "email": "mckay@doctormckay.com"
+    }
+  ],
+  "directories": {},
+  "_shasum": "80c27a1f49122cf10dae17626884e2336830e644",
+  "_resolved": "https://registry.npmjs.org/raw.js/-/raw.js-0.4.0.tgz",
+  "readme": "ERROR: No README data found!"
+}

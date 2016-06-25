@@ -1,9 +1,12 @@
-var config = require('../config.js');
+var config = require('../config.json');
+
+var Redis = require('ioredis');
+exports.redis = new Redis();
 
 var Sequelize = require('sequelize');
-var sequelize = new Sequelize(config.DB_DATABASE, config.DB_USERNAME, config.DB_PASSWORD, {
-   host: config.DB_HOST,
-   port: 3306,
+var sequelize = new Sequelize(config.mysql.database, config.mysql.username, config.mysql.password, {
+   host: config.mysql.host,
+   port: config.mysql.port,
    logging: false,
    pool: {
       max: 5,
@@ -19,10 +22,6 @@ exports.posts = sequelize.define('posts', {
    postUrl: {type: Sequelize.TEXT, allowNull: false},
    mirror: {type: Sequelize.TEXT, allowNull: false},
    commentId: {type: Sequelize.TEXT, allowNull: false}
-});
-
-exports.errors = sequelize.define('errors', {
-   error: {type: Sequelize.TEXT, allowNull: false}
 });
 
 sequelize.sync();
